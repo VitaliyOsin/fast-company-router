@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import SearchStatus from "./searchStatus";
-import ResetBtn from "./resetBtn";
-import Pagination from "./pagination";
+import SearchStatus from "../components/searchStatus";
+import ResetBtn from "../components/resetBtn";
+import Pagination from "../components/pagination";
 import { pagination } from "../utils/paginate";
-import GroupList from "./groupList";
+import GroupList from "../components/groupList";
 import api from "../api";
-import UsersTable from "./usersTable";
+import UsersTable from "../components/usersTable";
 import _ from "lodash";
 
 const Users = () => {
@@ -129,7 +129,11 @@ const Users = () => {
       </div>
     );
   }
-  return "";
+  return (
+    <div className="d-flex flex-row align-items-center justify-content-center h5 mt-3">
+      loading...
+    </div>
+  );
 };
 
 export default Users;
